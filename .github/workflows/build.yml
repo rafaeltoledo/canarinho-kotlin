@@ -1,0 +1,26 @@
+name: build
+
+on: push
+
+jobs:
+  build:
+    # Skip build if head commit contains 'skip ci'
+    if: "!contains(github.event.head_commit.message, 'skip ci')"
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Gradle Wrapper Validation
+        uses: gradle/wrapper-validation-action@v1
+      - name: Install JDK
+        uses: actions/setup-java@v3
+        with:
+          distribution: 'temurin'
+          java-version: '17'
+          cache: 'gradle'
+      - name: Configure Gradle
+        run: ./gradlew help
+      - name: Run tests
+        run: ./gradlew check

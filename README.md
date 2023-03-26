@@ -4,6 +4,8 @@
 
 🇺🇸 A library of utilities to work with Brazilian standards. This is a fork of [Canarinho](https://github.com/concretesolutions/canarinho) (that is based on [Stella](https://github.com/caelum/caelum-stella)) but implemented using Kotlin Multiplatform
 
+![Build](https://github.com/rafaeltoledo/kanarinho/workflows/build/badge.svg)
+
 ```
    Copyright 2023 Rafael Toledo
    Copyright 2023 Concrete Solutions
