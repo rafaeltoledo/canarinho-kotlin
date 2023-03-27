@@ -5,7 +5,7 @@ import net.rafaeltoledo.kanarinho.formatter.Formatter.Patterns.NUMBERS_ONLY
 
 class BoletoValidator : Validator {
 
-  private val digitForMod10 = DigitFor(
+  internal val digitForMod10 = DigitFor(
     mod = 10,
     multipliers = listOf(2, 1),
     shouldSumIndividually = true,
@@ -18,7 +18,7 @@ class BoletoValidator : Validator {
     )
   )
 
-  private val digitForMod11 = DigitFor(
+  internal val digitForMod11 = DigitFor(
     complimentaryMod = true,
     replacementList = listOf(
       DigitFor.ReplacementOptions(
